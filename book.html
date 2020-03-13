@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <form action="">
+       
+            <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">student</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="book.html">Library</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">product</a>
+                  </li>
+                  
+                </ul>
+              </nav>
+        
+            <div class="container">
+                <div class="row">
+                    <div class="col col-12 col-sm-4">
+        
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <table class="table">
+                            <tr>
+                                <td>book name</td>
+                                <td><input type="text" name="" id="bname" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>author</td>
+                                <td><input type="text" name="" id="bauthor" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>distributor</td>
+                                <td><input type="text" class="form-control" id="bdistributor"></td>
+                            </tr>
+                            <tr>
+                                <td>publisher</td>
+                                <td><input type="text" class="form-control" id="bpublisher"></td>
+                            </tr>
+                            <tr>
+                                <td>description</td>
+                                <td><textarea row="5" col="50" class="form-control" id="bdescription"></textarea></textarea</td>
+                            </tr>
+                            <tr>
+                                <td>price</td>
+                                <td><input type="text" name="" id="bprice" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td><button type="button" class="btn btn-success" onclick="reset()">reset</button></td>
+                                <td><button type="button" class="btn btn-success" onclick="submitVal()">submit</button></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><p id="result"></p></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col col-12 col-sm-4">
+        
+                    </div>
+                </div>
+            </div>
+    </form>
+    <script>
+       
+        function submitVal()
+        {
+            var name=document.getElementById("bname").value;
+            var author=document.getElementById("bauthor").value;
+            var distributor=document.getElementById("bdistributor").value;
+            var publisher=document.getElementById("bpublisher").value;
+            var description=document.getElementById("bdescription").value;
+            var price=document.getElementById("bprice").value;
+            document.getElementById("result").innerHTML="book name :  "+name+"<br>author :  "+author+"<br>distributor :  "+distributor+"<br>publisher :  "+publisher+"<br>description :  "+description+"<br>price :  "+price;
+
+            
+        }
+    </script>
+
+</body>
+</html>
